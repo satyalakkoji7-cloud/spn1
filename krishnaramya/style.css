@@ -1,0 +1,945 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    height:100vh;
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:'Cinzel',serif;
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+/* Countdown */
+
+#count{
+    font-size:120px;
+    color:white;
+    text-shadow:
+    0 0 20px gold,
+    0 0 40px gold;
+    
+    animation:pulse 1s infinite;
+}
+
+
+
+/* Ready Screen */
+
+#readyScreen h1{
+
+    color:#ffd700;
+    font-size:45px;
+
+    text-shadow:
+    0 0 20px gold;
+
+    animation:fade 3s;
+}
+
+
+
+/* Welcome */
+
+#welcomeScreen h1{
+
+    font-size:80px;
+
+    color:white;
+
+    text-shadow:
+    0 0 15px gold,
+    0 0 35px gold;
+
+    animation:welcome 3s;
+}
+
+
+
+/* Login Box */
+
+#loginBox{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 30px gold;
+
+}
+
+
+
+#loginBox h2{
+
+    color:#ffd700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+input{
+
+    width:280px;
+
+    padding:15px;
+
+    margin:10px;
+
+    border-radius:20px;
+
+    border:none;
+
+    outline:none;
+
+}
+
+
+
+button{
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffd700;
+
+    color:black;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    box-shadow:
+    0 0 20px gold;
+
+}
+
+
+
+/* Birthday Reveal */
+
+
+#birthdayReveal{
+
+    text-align:center;
+
+}
+
+
+
+#birthdayReveal h1{
+
+    font-family:'Great Vibes';
+
+    font-size:80px;
+
+    color:#ffd700;
+
+}
+
+
+
+#birthdayReveal h2{
+
+    font-family:'Great Vibes';
+
+    font-size:100px;
+
+    color:white;
+
+    text-shadow:
+    0 0 30px gold;
+
+}
+
+
+
+#birthdayReveal p{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+}
+
+
+
+
+/* Animations */
+
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.2);
+    }
+
+}
+
+
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+
+@keyframes welcome{
+
+    from{
+
+        opacity:0;
+        transform:scale(0.5);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+/* =========================
+   PART 2 - Teddy & Cake
+========================= */
+
+
+#cakeSection{
+
+    text-align:center;
+
+    animation:fade 2s;
+
+}
+
+
+
+.teddy{
+
+    font-size:120px;
+
+    animation:teddyMove 2s infinite alternate;
+
+}
+
+
+
+.cake{
+
+    font-size:100px;
+
+    margin-top:20px;
+
+    animation:cakeGlow 1.5s infinite alternate;
+
+}
+
+
+
+#cakeSection h2{
+
+    margin-top:20px;
+
+    color:#ffd700;
+
+    font-size:28px;
+
+}
+
+
+
+#cakeSection button{
+
+    margin-top:25px;
+
+}
+
+
+
+/* Teddy movement */
+
+@keyframes teddyMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+
+
+/* Cake glow */
+
+@keyframes cakeGlow{
+
+    from{
+
+        text-shadow:0 0 10px gold;
+
+    }
+
+    to{
+
+        text-shadow:0 0 30px pink;
+
+    }
+
+}
+
+
+
+/* Memories */
+
+#memorySection{
+
+    text-align:center;
+
+}
+
+
+
+#memorySection h1{
+
+    font-family:'Great Vibes';
+
+    font-size:70px;
+
+    color:#ffd700;
+
+    text-shadow:0 0 20px gold;
+
+}
+
+/* =========================
+   MEMORY GALLERY DESIGN
+========================= */
+
+
+#memorySection{
+
+    text-align:center;
+
+    animation:fade 2s;
+
+}
+
+
+
+#memorySection h1{
+
+    font-family:'Great Vibes';
+
+    font-size:70px;
+
+    color:#ffd700;
+
+    text-shadow:
+    0 0 20px gold;
+
+    margin-bottom:30px;
+
+}
+
+
+
+#memoryImage{
+
+    width:350px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px gold;
+
+    animation:photoShow 2s;
+
+}
+
+
+
+#caption{
+
+    margin-top:20px;
+
+    font-size:25px;
+
+    color:white;
+
+}
+
+
+
+#memorySection button{
+
+    margin-top:25px;
+
+}
+
+
+
+/* Photo Animation */
+
+@keyframes photoShow{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0.7);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =========================
+   PART 3 - LETTER SECTION
+========================= */
+
+
+#letterSection{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#ffd6e7;
+
+    color:#4a1c2a;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    padding-top:60px;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow-y:auto;
+
+    padding:40px;
+
+}
+
+
+
+#letterSection h1{
+
+    font-family:'Great Vibes';
+
+    font-size:70px;
+
+    color:#b03060;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.envelope{
+
+    font-size:100px;
+
+    animation:floatEnvelope 2s infinite alternate;
+
+}
+
+
+
+.letterBox{
+
+    background:white;
+
+    max-width:700px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 0 30px #e8a0b8;
+
+    font-family:serif;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+
+.letterBox p{
+
+    margin-bottom:20px;
+
+}
+
+
+
+@keyframes floatEnvelope{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+/* Letter Opening Animation */
+
+.letterBox{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:letterOpen 2s forwards;
+
+    animation-delay:1s;
+
+}
+
+
+@keyframes letterOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+.envelope{
+
+    animation:envelopeMove 2s infinite alternate;
+
+}
+
+
+
+@keyframes envelopeMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+.finalWish{
+
+    margin-top:40px;
+
+    font-size:30px;
+
+    font-family:'Great Vibes';
+
+    color:#b03060;
+
+    animation:glowText 2s infinite alternate;
+
+}
+
+
+
+.endMessage{
+
+    font-size:20px;
+
+    margin-top:20px;
+
+    color:#6b3045;
+
+}
+
+
+
+@keyframes glowText{
+
+    from{
+
+        text-shadow:0 0 10px pink;
+
+    }
+
+    to{
+
+        text-shadow:0 0 30px #ff69b4;
+
+    }
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/* Floating Hearts Effect */
+
+.hearts span{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:30px;
+
+    animation:heartMove 8s linear infinite;
+
+    opacity:0.7;
+
+    z-index:10;
+
+}
+
+
+.hearts span:nth-child(1){
+
+    left:10%;
+
+    animation-delay:0s;
+
+}
+
+
+.hearts span:nth-child(2){
+
+    left:30%;
+
+    animation-delay:2s;
+
+}
+
+
+.hearts span:nth-child(3){
+
+    left:50%;
+
+    animation-delay:4s;
+
+}
+
+
+.hearts span:nth-child(4){
+
+    left:70%;
+
+    animation-delay:1s;
+
+}
+
+
+.hearts span:nth-child(5){
+
+    left:90%;
+
+    animation-delay:3s;
+
+}
+
+
+
+@keyframes heartMove{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        transform:translateY(-100vh);
+
+        opacity:0;
+
+    }
+
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top, #ffe6f0, transparent),
+    radial-gradient(circle at bottom, #ffd1e3, transparent);
+
+}
+
+/* Premium Letter Card Effect */
+
+.letterBox{
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(176,48,96,0.25);
+
+    transition:0.5s;
+
+}
+
+
+.letterBox:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(176,48,96,0.35);
+
+}
+
+/* Premium Sparkle Effect */
+
+body::before{
+
+    content:"✨ ✦ ✨ ✦ ✨";
+
+    position:fixed;
+
+    top:10%;
+
+    left:0;
+
+    width:100%;
+
+    font-size:25px;
+
+    letter-spacing:80px;
+
+    opacity:0.5;
+
+    animation:sparkleMove 6s infinite alternate;
+
+    pointer-events:none;
+
+}
+
+
+@keyframes sparkleMove{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0.3;
+
+    }
+
+
+    to{
+
+        transform:translateY(40px);
+
+        opacity:0.8;
+
+    }
+
+}
+
+/* Glass Effect */
+
+.letterBox{
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,0.75);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+}
+
+.finalMessage{
+
+    max-width:800px;
+
+    margin:60px auto;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.75);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(255,105,180,0.2);
+
+    animation:fadeUp 2s ease;
+
+}
+
+.finalMessage h2{
+
+    color:#d63384;
+
+    margin-bottom:20px;
+
+    font-size:32px;
+
+}
+
+.finalMessage p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#444;
+
+    font-style:italic;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:all 0.8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
